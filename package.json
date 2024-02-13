@@ -1,0 +1,48 @@
+{
+  "name": "persons-js",
+  "version": "0.1.0",
+  "description": "Example GraphQL server using Node.js with Fastify and Mercurius.",
+  "author": "Darko Trifunovski <dtrifuno@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --es-module-specifier-resolution=node ./src/main.js",
+    "dev": "nodemon --es-module-specifier-resolution=node ./src/main.js",
+    "migrate": "postgrator",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "lint": "eslint src/ test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtrifuno/persons-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dtrifuno/persons-js/issues"
+  },
+  "homepage": "https://github.com/dtrifuno/persons-js#readme",
+  "dependencies": {
+    "@fastify/postgres": "^5.2.2",
+    "@fastify/redis": "^6.1.1",
+    "dotenv": "^16.4.4",
+    "fastify": "^4.26.1",
+    "fastify-plugin": "^4.5.1",
+    "luxon": "^3.4.4",
+    "mercurius": "13.3.2",
+    "mercurius-logging": "^1.4.0",
+    "mercurius-validation": "^4.0.0",
+    "pg": "^8.11.3",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-jest": "^27.9.0",
+    "graphql-request": "^6.1.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.3",
+    "postgrator": "^7.2.0",
+    "postgrator-cli": "^7.0.0"
+  }
+}
